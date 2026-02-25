@@ -3,7 +3,7 @@ import { CometCard } from './ui/comet-card';
 const services = [
     {
         title: 'Group Fitness Classes',
-        subtitle: 'Group Fitness',
+        subtitle: 'Zumba Classes',
         id: '#GF-01',
         image: 'https://images.unsplash.com/photo-1571019614242-c5c5dee9f50b?w=800&q=80',
     },
@@ -15,13 +15,13 @@ const services = [
     },
     {
         title: 'Personal Training',
-        subtitle: '1-on-1 coaching',
+        subtitle: 'Yoga & Pilates',
         id: '#PT-03',
         image: 'https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?w=800&q=80',
     },
     {
         title: 'Member Only Events',
-        subtitle: 'Events',
+        subtitle: 'special amenities',
         id: '#ME-04',
         image: 'https://images.unsplash.com/photo-1517836357463-d25dfeac3438?w=800&q=80',
     },

@@ -27,19 +27,17 @@ export default function Footer() {
                 <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-10">
                     {/* Brand */}
                     <div className="lg:col-span-1">
-                        <div className="flex items-center gap-3 mb-4">
-                            <div className="w-10 h-10 bg-accent rounded-xl flex items-center justify-center font-black text-primary text-sm">
-                                C9
-                            </div>
-                            <div>
-                                <span className="text-white font-bold text-lg block leading-tight">
-                                    Core 9
-                                </span>
-                                <span className="text-gray-500 text-xs tracking-widest uppercase">
-                                    Luxury Fitness
-                                </span>
+                        <div className="flex items-center mb-10">
+                            <div className="h-32 w-32 bg-white rounded-full shadow-2xl shadow-black/30 flex items-center justify-center border-4 border-accent/10 overflow-hidden">
+                                <img
+                                    src="/branding.jpeg"
+                                    alt="Core 9 Luxury Fitness Logo"
+                                    className="w-[120%] h-auto max-w-none object-contain mix-blend-multiply"
+                                />
                             </div>
                         </div>
+
+
                         <p className="text-gray-400 text-sm leading-relaxed mb-6">
                             Premium luxury fitness in Sri Vijaya Puram. Crush your health and
                             fitness goals with us.

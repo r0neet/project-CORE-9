@@ -1,8 +1,10 @@
 import Navbar from './components/Navbar';
 import Hero from './components/Hero';
+import VideoSection from './components/VideoSection';
 import Services from './components/Services';
 import FeatureSection from './components/FeatureSection';
 import Testimonials from './components/Testimonials';
+
 import About from './components/About';
 import Membership from './components/Membership';
 import ContactForm from './components/ContactForm';
@@ -13,6 +15,7 @@ function App() {
     <div className="min-h-screen bg-primary">
       <Navbar />
       <Hero />
+      <VideoSection />
       <Services />
 
       {/* Feature: Group Fitness Classes */}

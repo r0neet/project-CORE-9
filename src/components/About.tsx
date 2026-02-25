@@ -14,12 +14,7 @@ export default function About() {
                 </h2>
 
                 <p className="text-gray-400 text-base sm:text-lg max-w-3xl mx-auto leading-relaxed mb-12">
-                    Core 9 Luxury Fitness was founded with a single mission — to help the
-                    people of Sri Vijaya Puram get fit, stay healthy, and live life on
-                    their terms without fitness being an obstacle. Whether you're a
-                    beginner or an experienced athlete, our world-class trainers and
-                    state-of-the-art equipment will help you achieve your goals in a
-                    premium, supportive environment.
+                    " Core 9 Fitness Club is the premier luxury gym and fitness center in the Andaman Islands, designed for those who seek wellness with style. Our state-of-the-art facility offers everything from advanced cardio equipment, weight training machines, and dumbbells to dedicated spaces for yoga, zumba, and martial arts. Beyond workouts, we provide complete wellness solutions including steam bath, ice bath, and in-house doctor consultation. Refuel at our in-house cafeteria and experience fitness like never before — all under one roof at Core 9 Fitness Club. "
                 </p>
 
                 {/* Stats */}
