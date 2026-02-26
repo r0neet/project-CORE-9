@@ -1,25 +1,48 @@
+import { motion } from 'framer-motion';
+
 const testimonials = [
     {
         stars: 5,
-        quote:
-            '"Since joining Core 9, I\'ve lost 12kgs and I\'m getting stronger every day. The trainers here are incredible!"',
-        name: 'Rahul S.',
-        avatar: 'https://randomuser.me/api/portraits/men/32.jpg',
+        quote: "Core 9 is a game-changer! The yoga and Zumba classes are amazing, and the steam bath and ice bath are the perfect way to relax and recover. The equipment is top-notch and perfectly aligned. Spotless gym, super friendly staff. Highly recommend!",
+        name: 'Deepak Gj',
+        avatar: 'DG',
     },
     {
         stars: 5,
-        quote:
-            '"I\'ve gotten so much stronger after joining Core 9. My deadlift increased by 30kg in just 3 months. Highly recommend!"',
-        name: 'Priya M.',
-        avatar: 'https://randomuser.me/api/portraits/women/44.jpg',
+        quote: "This gym has everything I need - modern equipment, clean facilities, and a fantastic atmosphere for training. The workout floor areas are excellent for functional workouts and the staff is always friendly and helpful. Join now!!",
+        name: 'Gaurish Nath',
+        avatar: 'GN',
     },
     {
         stars: 5,
-        quote:
-            '"While I am passionate about health and fitness, this gym is more like a community to me than anything! Best gym in the islands."',
-        name: 'Arun K.',
-        avatar: 'https://randomuser.me/api/portraits/men/67.jpg',
+        quote: "Core 9 is an amazing gym with good facilities. The owner is very humble and supportive during the workout session. I took a day pass and it was totally worth it. Best experience in Port Blair!",
+        name: 'Vishal Raj Chauhan',
+        avatar: 'VC',
     },
+    {
+        stars: 5,
+        quote: "Every had a very good experience there and it's totally worth it. The ambience and hospitality which they provide are at a very reasonable price. I really love this place, everyone should check this out.",
+        name: 'Arpit Majeji',
+        avatar: 'AM',
+    },
+    {
+        stars: 5,
+        quote: "It was an amazing experience and I enjoyed the workout. It's a proper gym, the best I have ever seen in Port Blair. High quality machines and great vibes.",
+        name: 'RAKIB Khan',
+        avatar: 'RK',
+    },
+    {
+        stars: 5,
+        quote: "The best in the island ... wow ... Core facilities, best equipment, luxury environment altogether. A must visit place for all fitness aspirators in the islands!",
+        name: 'rp siddharth',
+        avatar: 'RS',
+    },
+    {
+        stars: 5,
+        quote: "It's the best place for fitness for everyone... They provide lots of great things. Great hospitality and luxury equipment for all. I love this place truly. Highly recommended!",
+        name: 'Sumit Roy',
+        avatar: 'SR',
+    }
 ];
 
 function StarIcon() {
@@ -36,45 +59,67 @@ function StarIcon() {
 
 export default function Testimonials() {
     return (
-        <section className="py-24 bg-olive">
-            <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-                <h2 className="text-3xl sm:text-4xl md:text-5xl font-black text-center text-white mb-4">
-                    What our members say
-                </h2>
-                <p className="text-white/70 text-center text-lg mb-16 max-w-2xl mx-auto">
-                    Real results from real people at Core 9 Luxury Fitness
-                </p>
+        <section className="py-24 bg-black overflow-hidden relative">
+            {/* Background elements for depth */}
+            <div className="absolute top-0 left-1/4 w-96 h-96 bg-lime-400/5 blur-[120px] rounded-full pointer-events-none" />
+            <div className="absolute bottom-0 right-1/4 w-96 h-96 bg-lime-400/5 blur-[120px] rounded-full pointer-events-none" />
 
-                <div className="grid grid-cols-1 md:grid-cols-3 gap-6 lg:gap-8">
-                    {testimonials.map((t, i) => (
+            <div className="max-w-7xl mx-auto px-4 mb-16 relative z-10 text-center">
+                <h2 className="text-4xl md:text-6xl font-black text-white mb-6 uppercase tracking-tighter">
+                    What Our Members <span className="text-lime-400">Say</span>
+                </h2>
+                <p className="text-white/60 text-lg md:text-xl max-w-2xl mx-auto font-medium">
+                    Real reports from real people at Port Blair's premier luxury fitness destination.
+                </p>
+            </div>
+
+            <div className="flex relative items-center">
+                {/* Gradient Masks */}
+                <div className="absolute left-0 top-0 bottom-0 w-32 bg-gradient-to-r from-black to-transparent z-10 pointer-events-none" />
+                <div className="absolute right-0 top-0 bottom-0 w-32 bg-gradient-to-l from-black to-transparent z-10 pointer-events-none" />
+
+                <motion.div
+                    animate={{
+                        x: [0, "-50%"]
+                    }}
+                    transition={{
+                        duration: 40,
+                        ease: "linear",
+                        repeat: Infinity
+                    }}
+                    className="flex gap-8 px-4"
+                >
+                    {/* Duplicate the testimonials array to create a seamless loop */}
+                    {[...testimonials, ...testimonials].map((t, i) => (
                         <div
                             key={i}
-                            className="bg-olive-dark/30 border border-olive-light/20 backdrop-blur-sm rounded-2xl p-8 flex flex-col items-center text-center hover:border-olive-light/40 transition-all hover:-translate-y-1"
+                            className="flex-shrink-0 w-[350px] md:w-[450px] bg-white/5 border border-white/10 backdrop-blur-xl rounded-3xl p-8 flex flex-col justify-between hover:border-lime-400/50 transition-colors group cursor-default"
                         >
-                            {/* Stars */}
-                            <div className="flex gap-1 mb-5">
-                                {Array.from({ length: t.stars }).map((_, j) => (
-                                    <StarIcon key={j} />
-                                ))}
+                            <div>
+                                <div className="flex gap-1 mb-6">
+                                    {Array.from({ length: t.stars }).map((_, j) => (
+                                        <StarIcon key={j} />
+                                    ))}
+                                </div>
+                                <p className="text-white/90 text-lg md:text-xl italic leading-relaxed mb-8">
+                                    "{t.quote}"
+                                </p>
                             </div>
 
-                            {/* Quote */}
-                            <p className="text-white/90 text-base leading-relaxed mb-6 flex-1">
-                                {t.quote}
-                            </p>
-
-                            {/* Avatar */}
-                            <img
-                                src={t.avatar}
-                                alt={t.name}
-                                className="w-14 h-14 rounded-full object-cover border-2 border-olive-light/40 mb-2"
-                            />
-                            <span className="text-white/70 text-sm font-medium">
-                                {t.name}
-                            </span>
+                            <div className="flex items-center gap-4">
+                                <div className="w-12 h-12 rounded-full bg-lime-400 flex items-center justify-center text-black font-bold text-lg">
+                                    {t.avatar}
+                                </div>
+                                <div>
+                                    <h4 className="text-white font-bold text-lg group-hover:text-lime-400 transition-colors">
+                                        {t.name}
+                                    </h4>
+                                    <p className="text-white/40 text-sm">Verified Member</p>
+                                </div>
+                            </div>
                         </div>
                     ))}
-                </div>
+                </motion.div>
             </div>
         </section>
     );
