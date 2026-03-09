@@ -9,6 +9,7 @@ interface FeatureSectionProps {
     image: string;
     imageAlt: string;
     reversed?: boolean;
+    objectFit?: 'cover' | 'contain';
 }
 
 export default function FeatureSection({
@@ -18,6 +19,7 @@ export default function FeatureSection({
     image,
     imageAlt,
     reversed = false,
+    objectFit = 'cover',
 }: FeatureSectionProps) {
     return (
         <section className="py-20 bg-primary">
@@ -64,9 +66,10 @@ export default function FeatureSection({
                             <img
                                 src={image}
                                 alt={imageAlt}
-                                className="w-full h-[400px] sm:h-[500px] object-cover"
+                                className={`w-full ${objectFit === 'contain' ? 'h-auto' : 'h-[400px] sm:h-[500px]'
+                                    } object-${objectFit}`}
                             />
-                            <div className="absolute inset-0 bg-gradient-to-t from-primary/30 to-transparent" />
+                            <div className="absolute inset-0 bg-gradient-to-t from-primary/30 to-transparent pointer-events-none" />
                         </div>
                     </div>
                 </div>

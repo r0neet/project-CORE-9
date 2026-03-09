@@ -3,13 +3,13 @@ import { CometCard } from './ui/comet-card';
 const services = [
     {
         title: 'Group Fitness Classes',
-        subtitle: 'Zumba Classes',
+        subtitle: 'Trainers',
         id: '#GF-01',
         image: 'https://images.unsplash.com/photo-1571019614242-c5c5dee9f50b?w=800&q=80',
     },
     {
         title: 'Strength Training',
-        subtitle: 'Strength',
+        subtitle: 'Equipment',
         id: '#ST-02',
         image: 'https://images.unsplash.com/photo-1583454110551-21f2fa2afe61?w=800&q=80',
     },
@@ -45,8 +45,6 @@ export default function Services() {
                                     aria-label={`View ${service.title}`}
                                     style={{
                                         transformStyle: "preserve-3d",
-                                        transform: "none",
-                                        opacity: 1,
                                     }}
                                 >
                                     <div className="mx-2 flex-1">

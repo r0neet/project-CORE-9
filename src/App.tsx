@@ -20,15 +20,16 @@ function App() {
 
       {/* Feature: Group Fitness Classes */}
       <FeatureSection
-        badge="Group Fitness Classes"
+        badge="Trainers"
         heading="Get fit while having fun with our group fitness classes"
         checklist={[
           { text: 'Just 30 minutes long' },
           { text: 'Warm up & workout included' },
           { text: 'Fun is guaranteed' },
         ]}
-        image="https://images.unsplash.com/photo-1571019614242-c5c5dee9f50b?w=800&q=80"
+        image="/3.jpeg"
         imageAlt="Group fitness class at Core 9 Luxury Fitness"
+        objectFit="contain"
       />
 
       {/* Feature: Strength Training */}
@@ -40,7 +41,7 @@ function App() {
           { text: 'Personalized programming' },
           { text: 'Track your progress' },
         ]}
-        image="https://images.unsplash.com/photo-1583454110551-21f2fa2afe61?w=800&q=80"
+        image="/4.jpeg"
         imageAlt="Strength training at Core 9 Luxury Fitness"
         reversed
       />

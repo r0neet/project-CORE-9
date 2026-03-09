@@ -111,7 +111,7 @@ export default function ContactForm() {
                     <div className="flex-1 w-full">
                         <div className="relative rounded-2xl overflow-hidden shadow-2xl shadow-black/30">
                             <img
-                                src="https://images.unsplash.com/photo-1581009146145-b5ef050c2e1e?w=800&q=80"
+                                src="/2.jpeg"
                                 alt="Core 9 Luxury Fitness trainers"
                                 className="w-full h-[400px] sm:h-[520px] object-cover"
                             />
