@@ -1,3 +1,4 @@
+import { Link } from 'react-router-dom';
 import { CometCard } from './ui/comet-card';
 
 const services = [
@@ -6,24 +7,28 @@ const services = [
         subtitle: 'Trainers',
         id: '#GF-01',
         image: 'https://images.unsplash.com/photo-1571019614242-c5c5dee9f50b?w=800&q=80',
+        link: '/trainers',
     },
     {
         title: 'Strength Training',
         subtitle: 'Equipment',
         id: '#ST-02',
         image: 'https://images.unsplash.com/photo-1583454110551-21f2fa2afe61?w=800&q=80',
+        link: '/equipment',
     },
     {
         title: 'Personal Training',
         subtitle: 'Yoga & Pilates',
         id: '#PT-03',
         image: 'https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?w=800&q=80',
+        link: '/yoga-pilates',
     },
     {
         title: 'Member Only Events',
         subtitle: 'special amenities',
         id: '#ME-04',
         image: 'https://images.unsplash.com/photo-1517836357463-d25dfeac3438?w=800&q=80',
+        link: '/special-amenities',
     },
 ];
 
@@ -39,12 +44,13 @@ export default function Services() {
                     {services.map((service, index) => (
                         <div key={index} className="flex justify-center">
                             <CometCard>
-                                <button
-                                    type="button"
+                                <Link
+                                    to={service.link}
                                     className="flex w-full sm:w-80 cursor-pointer flex-col items-stretch rounded-[16px] border-0 bg-[#1F2121] p-2 saturate-0 transition-all hover:saturate-100 md:p-4"
                                     aria-label={`View ${service.title}`}
                                     style={{
                                         transformStyle: "preserve-3d",
+                                        textDecoration: "none"
                                     }}
                                 >
                                     <div className="mx-2 flex-1">
@@ -65,7 +71,7 @@ export default function Services() {
                                         <div className="text-xs">{service.subtitle}</div>
                                         <div className="text-xs text-gray-300 opacity-50">{service.id}</div>
                                     </div>
-                                </button>
+                                </Link>
                             </CometCard>
                         </div>
                     ))}
