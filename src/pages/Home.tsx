@@ -5,6 +5,7 @@ import FeatureSection from '../components/FeatureSection';
 import Testimonials from '../components/Testimonials';
 import About from '../components/About';
 import Membership from '../components/Membership';
+import FamilySection from '../components/FamilySection';
 import ContactForm from '../components/ContactForm';
 
 export default function Home() {
@@ -50,7 +51,7 @@ export default function Home() {
           { text: 'Certified expert trainers' },
           { text: 'Custom workout plans' },
           { text: 'Nutrition guidance included' },
-        ]}
+          ]}
         image="https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?w=800&q=80"
         imageAlt="Personal training at Core 9 Luxury Fitness"
       />
@@ -58,6 +59,7 @@ export default function Home() {
       <Testimonials />
       <About />
       <Membership />
+      <FamilySection />
       <ContactForm />
     </>
   );

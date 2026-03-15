@@ -42,11 +42,11 @@ export default function Services() {
 
                 <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-x-8 gap-y-12">
                     {services.map((service, index) => (
-                        <div key={index} className="flex justify-center">
-                            <CometCard>
+                        <div key={index} className="flex justify-center w-full">
+                            <CometCard className="w-full sm:w-auto">
                                 <Link
                                     to={service.link}
-                                    className="flex w-full sm:w-80 cursor-pointer flex-col items-stretch rounded-[16px] border-0 bg-[#1F2121] p-2 saturate-0 transition-all hover:saturate-100 md:p-4"
+                                    className="flex w-full sm:w-80 cursor-pointer flex-col items-stretch rounded-[16px] border-0 bg-[#1F2121] p-2 saturate-100 sm:saturate-0 transition-all sm:hover:saturate-100 md:p-4"
                                     aria-label={`View ${service.title}`}
                                     style={{
                                         transformStyle: "preserve-3d",
