@@ -52,7 +52,7 @@ export default function Home() {
           { text: 'Custom workout plans' },
           { text: 'Nutrition guidance included' },
           ]}
-        image="https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?w=800&q=80"
+        image="/1.jpeg"
         imageAlt="Personal training at Core 9 Luxury Fitness"
       />
 

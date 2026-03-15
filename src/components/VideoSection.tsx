@@ -17,7 +17,7 @@ const VideoSection = () => {
                     video.pause();
                 }
             },
-            { threshold: 0.5 } // Play when at least 50% visible
+            { threshold: 0.2 } // Play when at least 20% visible
         );
 
         observer.observe(video);
@@ -43,12 +43,13 @@ const VideoSection = () => {
                 <div className="relative group overflow-hidden rounded-2xl shadow-[0_20px_50px_rgba(0,0,0,0.5)] border border-white/5 bg-gray-900 aspect-video flex items-center justify-center transition-all duration-500 hover:border-accent/30">
                     <video
                         ref={videoRef}
-                        src="/IMG_6049 (1).MP4"
+                        src="https://res.cloudinary.com/dsrquoqqm/video/upload/v1773593363/IMG_6049_1_eccdl1.mp4"
                         className="absolute inset-0 w-full h-full object-cover"
+                        autoPlay
                         muted
                         loop
                         playsInline
-                        disablePictureInPicture
+                        preload="auto"
                     />
 
 
