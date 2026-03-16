@@ -7,6 +7,7 @@ import About from '../components/About';
 import Membership from '../components/Membership';
 import FamilySection from '../components/FamilySection';
 import ContactForm from '../components/ContactForm';
+import BirthdayBanner from '../components/BirthdayBanner';
 
 export default function Home() {
   return (
@@ -61,6 +62,7 @@ export default function Home() {
       <Membership />
       <FamilySection />
       <ContactForm />
+      <BirthdayBanner />
     </>
   );
 }

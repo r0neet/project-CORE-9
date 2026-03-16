@@ -1,11 +1,13 @@
 import { useState } from 'react';
+import { submitMembership } from '../services/membershipApi';
 
 export default function ContactForm() {
     const [formData, setFormData] = useState({
-        name: '',
+        fullName: '',
         email: '',
-        phone: '',
-        interest: '',
+        phoneNumber: '',
+        dateOfBirth: '',
+        membershipPlan: '',
     });
     const [submitted, setSubmitted] = useState(false);
 
@@ -15,11 +17,26 @@ export default function ContactForm() {
         setFormData({ ...formData, [e.target.name]: e.target.value });
     };
 
-    const handleSubmit = (e: React.FormEvent) => {
+    const handleSubmit = async (e: React.FormEvent) => {
         e.preventDefault();
         setSubmitted(true);
-        // Backend hook goes here later
-        setTimeout(() => setSubmitted(false), 3000);
+        
+        const today = new Date();
+        const joinDate = `${today.getFullYear()}-${String(today.getMonth() + 1).padStart(2, '0')}-${String(today.getDate()).padStart(2, '0')}`;
+        
+        const payload = {
+            ...formData,
+            photoUrl: "",
+            joinDate,
+            memberId: crypto.randomUUID()
+        };
+
+        await submitMembership(payload);
+        
+        setTimeout(() => {
+            setSubmitted(false);
+            setFormData({ fullName: '', email: '', phoneNumber: '', dateOfBirth: '', membershipPlan: '' });
+        }, 3000);
     };
 
     return (
@@ -58,10 +75,10 @@ export default function ContactForm() {
                             <form onSubmit={handleSubmit} className="space-y-5">
                                 <input
                                     type="text"
-                                    name="name"
-                                    placeholder="Name"
+                                    name="fullName"
+                                    placeholder="Full Name"
                                     required
-                                    value={formData.name}
+                                    value={formData.fullName}
                                     onChange={handleChange}
                                     className="w-full bg-white text-gray-900 placeholder-gray-500 px-6 py-4 rounded-xl outline-none focus:ring-2 focus:ring-accent transition-all text-base"
                                 />
@@ -76,19 +93,28 @@ export default function ContactForm() {
                                 />
                                 <input
                                     type="tel"
-                                    name="phone"
+                                    name="phoneNumber"
                                     placeholder="Phone number"
                                     required
-                                    value={formData.phone}
+                                    value={formData.phoneNumber}
+                                    onChange={handleChange}
+                                    className="w-full bg-white text-gray-900 placeholder-gray-500 px-6 py-4 rounded-xl outline-none focus:ring-2 focus:ring-accent transition-all text-base"
+                                />
+                                <input
+                                    type="date"
+                                    name="dateOfBirth"
+                                    required
+                                    value={formData.dateOfBirth}
                                     onChange={handleChange}
                                     className="w-full bg-white text-gray-900 placeholder-gray-500 px-6 py-4 rounded-xl outline-none focus:ring-2 focus:ring-accent transition-all text-base"
                                 />
                                 <select
-                                    name="interest"
+                                    name="membershipPlan"
                                     required
-                                    value={formData.interest}
+                                    value={formData.membershipPlan}
                                     onChange={handleChange}
                                     className="w-full bg-white text-gray-900 px-6 py-4 rounded-xl outline-none focus:ring-2 focus:ring-accent transition-all text-base appearance-none cursor-pointer"
+                                    style={{ color: formData.membershipPlan === "" ? '#6b7280' : '#111827' }}
                                 >
                                     <option value="" disabled>
                                         Membership interest...

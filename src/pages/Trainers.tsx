@@ -29,7 +29,7 @@ export default function Trainers() {
                         <div key={i} className="group relative overflow-hidden rounded-2xl bg-[#1A1A1A] border border-white/5 transition-all hover:border-white/20">
                             <div className="aspect-[4/5] w-full bg-[#111] overflow-hidden">
                                 <img
-                                    src={`https://images.unsplash.com/photo-${[
+                                    src={i === 1 ? '/tra1.png' : i === 2 ? '/tra2.png' : `https://images.unsplash.com/photo-${[
                                         '1567013127542-490d1b5e51f4',
                                         '1534438327276-14e5300c3a48',
                                         '1594381898411-846e7d193883',
