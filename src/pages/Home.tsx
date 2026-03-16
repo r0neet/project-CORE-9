@@ -38,7 +38,7 @@ export default function Home() {
           { text: 'Personalized programming' },
           { text: 'Track your progress' },
         ]}
-        image="/4.jpeg"
+        image="/1.jpeg"
         imageAlt="Strength training at Core 9 Luxury Fitness"
         reversed
       />
@@ -52,7 +52,7 @@ export default function Home() {
           { text: 'Custom workout plans' },
           { text: 'Nutrition guidance included' },
           ]}
-        image="/1.jpeg"
+        image="/4.jpeg"
         imageAlt="Personal training at Core 9 Luxury Fitness"
       />
 

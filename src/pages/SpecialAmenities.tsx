@@ -15,14 +15,49 @@ export default function SpecialAmenities() {
                 imageAlt="Luxury gym amenities"
                 reversed
             />
-            <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 mt-16 text-gray-300 space-y-6">
-                <h2 className="text-3xl font-black text-white italic">Beyond the Workout</h2>
-                <p>
-                    Your fitness journey doesn't end when your workout is over. We offer a suite of premium amenities designed to accelerate your recovery and elevate your daily routine. Relax and rejuvenate in our state-of-the-art contrast therapy suites featuring infrared saunas and cold plunges.
-                </p>
-                <p>
-                    Prepare for the day ahead in our immaculate locker rooms, appointed with luxurious towels, rainfall showers, and high-end grooming products. Refuel post-workout at our nutrition bar with custom protein blends and artisanal refreshments. Experience fitness where every detail is considered.
-                </p>
+            <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 mt-16">
+                <h2 className="text-3xl font-black text-white italic mb-10 text-center">Beyond the Workout</h2>
+                <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+                    <div className="relative group overflow-hidden rounded-xl">
+                        <img src="/ami1.png" alt="Cafeteria" className="w-full h-80 object-cover transform group-hover:scale-105 transition-transform duration-500" />
+                        <div className="absolute inset-0 bg-gradient-to-t from-black/90 via-black/40 to-transparent flex items-end">
+                            <div className="p-6">
+                                <h3 className="text-2xl font-bold text-white mb-2">Cafeteria</h3>
+                                <p className="text-gray-300">Refuel post-workout at our premium nutrition bar with custom protein blends and artisanal refreshments.</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div className="relative group overflow-hidden rounded-xl">
+                        <img src="/ami2.jpg" alt="Storage" className="w-full h-80 object-cover transform group-hover:scale-105 transition-transform duration-500" />
+                        <div className="absolute inset-0 bg-gradient-to-t from-black/90 via-black/40 to-transparent flex items-end">
+                            <div className="p-6">
+                                <h3 className="text-2xl font-bold text-white mb-2">Storage</h3>
+                                <p className="text-gray-300">A dedicated space to keep your personal items safely and securely while you focus on your workout.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div className="relative group overflow-hidden rounded-xl">
+                        <img src="/ami3.jpg" alt="Steam Room" className="w-full h-80 object-cover transform group-hover:scale-105 transition-transform duration-500" />
+                        <div className="absolute inset-0 bg-gradient-to-t from-black/90 via-black/40 to-transparent flex items-end">
+                            <div className="p-6">
+                                <h3 className="text-2xl font-bold text-white mb-2">Steam Room</h3>
+                                <p className="text-gray-300">Relax and rejuvenate in our state-of-the-art steam rooms designed to accelerate your recovery.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div className="relative group overflow-hidden rounded-xl">
+                        <img src="/ami4.jpg" alt="Ice Bath" className="w-full h-80 object-cover transform group-hover:scale-105 transition-transform duration-500" />
+                        <div className="absolute inset-0 bg-gradient-to-t from-black/90 via-black/40 to-transparent flex items-end">
+                            <div className="p-6">
+                                <h3 className="text-2xl font-bold text-white mb-2">Ice Bath</h3>
+                                <p className="text-gray-300">Experience premium contrast therapy suites featuring cold plunges to elevate your daily routine.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
     );
