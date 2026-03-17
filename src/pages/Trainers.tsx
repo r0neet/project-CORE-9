@@ -24,19 +24,22 @@ export default function Trainers() {
                 >
                     Let's Meet Our Trainers
                 </h2>
-                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-12 text-left">
-                    {[1, 2, 3, 4, 5].map((i) => (
-                        <div key={i} className="group relative overflow-hidden rounded-2xl bg-[#1A1A1A] border border-white/5 transition-all hover:border-white/20">
+                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 text-left">
+                    {[
+                        '/tra1.jpg',
+                        '/tra2.png',
+                        '/tra3.png',
+                        '/tra4.jpg',
+                        '/tra5.jpg',
+                        '/tra6.jpg',
+                        '/tra7.jpg',
+                        '/tra8.jpg'
+                    ].map((imgSrc, index) => (
+                        <div key={index} className="group relative overflow-hidden rounded-2xl bg-[#1A1A1A] border border-white/5 transition-all hover:border-white/20">
                             <div className="aspect-[4/5] w-full bg-[#111] overflow-hidden">
                                 <img
-                                    src={i === 1 ? '/tra1.png' : i === 2 ? '/tra2.png' : `https://images.unsplash.com/photo-${[
-                                        '1567013127542-490d1b5e51f4',
-                                        '1534438327276-14e5300c3a48',
-                                        '1594381898411-846e7d193883',
-                                        '1549476464-37392f717551',
-                                        '1517836357463-d25dfeac3438'
-                                    ][i - 1]}?w=800&q=80`}
-                                    alt={`Trainer ${i}`}
+                                    src={imgSrc}
+                                    alt={`Trainer ${index + 1}`}
                                     className="h-full w-full object-cover opacity-100 lg:opacity-60 transition-transform duration-500 lg:group-hover:scale-110 lg:group-hover:opacity-100"
                                 />
                                 <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent" />
