@@ -2,7 +2,7 @@ import React from 'react';
 
 const FamilySection: React.FC = () => {
     return (
-        <section id="family-section" className="relative w-full h-screen min-h-[500px] bg-black overflow-hidden flex flex-col items-center">
+        <section id="family-section" className="relative w-full h-[50vh] min-h-[400px] md:h-screen md:min-h-[500px] bg-black overflow-hidden flex flex-col items-center">
             {/* Background Image Container */}
             <div className="absolute inset-0 z-0">
                 <img

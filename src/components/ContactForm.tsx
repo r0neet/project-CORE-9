@@ -10,6 +10,7 @@ export default function ContactForm() {
         membershipPlan: '',
     });
     const [submitted, setSubmitted] = useState(false);
+    const [dateFocused, setDateFocused] = useState(false);
 
     const handleChange = (
         e: React.ChangeEvent<HTMLInputElement | HTMLSelectElement>
@@ -100,14 +101,25 @@ export default function ContactForm() {
                                     onChange={handleChange}
                                     className="w-full bg-white text-gray-900 placeholder-gray-500 px-6 py-4 rounded-xl outline-none focus:ring-2 focus:ring-accent transition-all text-base"
                                 />
-                                <input
-                                    type="date"
-                                    name="dateOfBirth"
-                                    required
-                                    value={formData.dateOfBirth}
-                                    onChange={handleChange}
-                                    className="w-full bg-white text-gray-900 placeholder-gray-500 px-6 py-4 rounded-xl outline-none focus:ring-2 focus:ring-accent transition-all text-base"
-                                />
+                                <div className="relative w-full">
+                                    <input
+                                        type="date"
+                                        name="dateOfBirth"
+                                        required
+                                        value={formData.dateOfBirth}
+                                        onChange={handleChange}
+                                        onFocus={() => setDateFocused(true)}
+                                        onBlur={() => setDateFocused(false)}
+                                        className={`w-full bg-white px-6 py-4 rounded-xl outline-none focus:ring-2 focus:ring-accent transition-all text-base ${
+                                            !formData.dateOfBirth && !dateFocused ? 'text-transparent' : 'text-gray-900'
+                                        }`}
+                                    />
+                                    {!formData.dateOfBirth && !dateFocused && (
+                                        <div className="absolute left-6 top-1/2 -translate-y-1/2 text-gray-500 pointer-events-none text-base">
+                                            DOB
+                                        </div>
+                                    )}
+                                </div>
                                 <select
                                     name="membershipPlan"
                                     required
