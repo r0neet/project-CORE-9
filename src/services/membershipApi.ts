@@ -12,7 +12,7 @@ export interface BirthdayMember {
     photoUrl: string;
 }
 
-const API_URL = 'https://script.google.com/macros/s/AKfycbwzm7XYYX05JmCP3audAWcObSu440iFKZsh5g-iIjle5zljcOddI0tKIrLQta9RELyW/exec';
+const API_URL = import.meta.env.VITE_GOOGLE_APPS_SCRIPT_URL as string;
 const CACHE_KEY = 'core9_birthdays';
 const CACHE_DURATION_MS = 5 * 60 * 1000; // 5 minutes
 
